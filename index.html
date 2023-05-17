@@ -25,19 +25,22 @@
       <div class="flex justify-center">
         <form action="" class="grid grid-cols-6 gap-x-6 md:grid-cols-12">
           <div class="col-start-1 col-end-3 md:col-start-1 md:col-end-4">
-            <label class="block font-poppins-bold text-[#716F6F]" for="day">DAY</label>
-            <input class="block border border-[#DBDBDB] rounded-md w-16 md:w-24 h-12 align-text-top font-bold hover:border-[#854DFF]" id="day" type="text" placeholder="DD">
+            <label class="block font-poppins-bold text-[#716F6F]" for="day"><span class="label">DAY</span></label>
+            <input class="block error border border-default rounded-md w-16 md:w-24 h-12 align-text-top font-bold hover:border-[#854DFF] " id="day" type="text" placeholder="DD">
           </div>
+          <div class="col-start-1 col-end-3 md:col-start-1 md:col-end-4 text-xs row-start-3 row-end-3 text-red-500 error-text"></div><!--div for error-->
 
           <div class="col-start-3 col-end-5 md:col-start-4 md:col-end-7">
-            <label class="block font-poppins-bold text-[#716F6F]" for="month">MONTH</label>
-            <input class="block border border-[#DBDBDB] rounded-md w-16 md:w-24 h-12 align-text-top font-bold hover:border-[#854DFF]" id="month" type="text" placeholder="MM">
+            <label class="block font-poppins-bold text-[#716F6F]" for="month"><span class="label">MONTH</span></label>
+            <input class="block error border border-default rounded-md w-16 md:w-24 h-12 align-text-top font-bold hover:border-[#854DFF] " id="month" type="text" placeholder="MM">
           </div>
+          <div class="col-start-3 col-end-5 md:col-start-4 md:col-end-7 text-xs row-start-3 row-end-3 text-red-500 error-text"></div>
 
           <div class="col-start-5 col-end-7 md:col-start-7 md:col-end-10">
-            <label class="block font-poppins-bold text-[#716F6F]" for="year">YEAR</label>
-            <input class="block border border-[#DBDBDB] rounded-md w-16 md:w-24 h-12 align-text-top font-bold hover:border-[#854DFF]" id="year" type="text" placeholder="YYYY">
+            <label class="block font-poppins-bold text-[#716F6F]" for="year"><span class="label">YEAR</span></label>
+            <input class="block error border border-default rounded-md w-16 md:w-24 h-12 align-text-top font-bold hover:border-[#854DFF] " id="year" type="text" placeholder="YYYY">
           </div>
+          <div class="col-start-5 col-end-7 md:col-start-7 md:col-end-10 text-xs row-start-3 row-end-3 text-red-500 error-text"></div>
 
         </form>
       </div>
@@ -45,7 +48,7 @@
       <div class="relative">
 
         <hr class="absolute w-3/4 mx-12 top-14">
-        <div class="w-16 h-16 bg-[#854DFF] rounded-full absolute top-6 right-40 md:right-16 cursor-pointer hover:bg-black">
+        <div class="button">
           <svg class="m-2"
               xmlns="http://www.w3.org/2000/svg"
               width="46"

@@ -3,3 +3,22 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.button{
+    @apply w-16 h-16 bg-[#854DFF] rounded-full absolute top-6 right-40 md:right-16 cursor-pointer hover:bg-black;
+}
+
+.border-default{
+    @apply border-[#DBDBDB];    
+}
+
+.berror{
+    @apply border-red-500;
+    
+}
+
+.lerror{
+    @apply text-red-500;
+}
+
+
