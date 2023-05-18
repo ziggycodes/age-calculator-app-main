@@ -20,43 +20,50 @@
 
   <div class="h-screen w-screen bg-[#F0F0F0] py-16 flex justify-center">
     
-    <div class="bg-white h-[28rem] w-96 rounded-3xl py-16">
+    <div class="bg-white h-[28rem] w-96 md:w-[40rem] rounded-3xl rounded-br-[6rem] py-16">
 
       <div class="flex justify-center">
-        <form action="" class="grid grid-cols-6 gap-x-6">
-          <div class="col-start-1 col-end-3">
+        <form action="" class="grid grid-cols-6 gap-x-6 md:grid-cols-12">
+          <div class="col-start-1 col-end-3 md:col-start-1 md:col-end-4">
             <label class="block font-semibold" for="day">DAY</label>
-            <input class="block border border-[#DBDBDB] rounded-md w-16 h-12 align-text-top font-bold" id="day" type="text" placeholder="DD">
+            <input class="block border border-[#DBDBDB] rounded-md w-16 md:w-24 h-12 align-text-top font-bold" id="day" type="text" placeholder="DD">
           </div>
 
-          <div class="col-start-3 col-end-5">
+          <div class="col-start-3 col-end-5 md:col-start-4 md:col-end-7">
             <label class="block font-semibold" for="month">MONTH</label>
-            <input class="block border border-[#DBDBDB] rounded-md w-16 h-12 align-text-top font-bold" id="month" type="text" placeholder="MM">
+            <input class="block border border-[#DBDBDB] rounded-md w-16 md:w-24 h-12 align-text-top font-bold" id="month" type="text" placeholder="MM">
           </div>
 
-          <div class="col-start-5 col-end-7">
+          <div class="col-start-5 col-end-7 md:col-start-7 md:col-end-10">
             <label class="block font-semibold" for="year">YEAR</label>
-            <input class="block border border-[#DBDBDB] rounded-md w-16 h-12 align-text-top font-bold" id="year" type="text" placeholder="YYYY">
+            <input class="block border border-[#DBDBDB] rounded-md w-16 md:w-24 h-12 align-text-top font-bold" id="year" type="text" placeholder="YYYY">
           </div>
 
         </form>
       </div>
 
-      <hr class="my-6">
+      <div class="relative">
 
-      <div class="w-12 h-12 bg-blue-400">
-        <svg
-            xmlns="http://www.w3.org/2000/svg"
-            width="46"
-            height="44"
-            viewBox="0 0 46 44"
-          >
-            <g fill="none" stroke="#FFF" stroke-width="2">
-              <path
-                d="M1 22.019C8.333 21.686 23 25.616 23 44M23 44V0M45 22.019C37.667 21.686 23 25.616 23 44"
-              />
-            </g>
-          </svg>
+        <hr class="absolute w-3/4 mx-12 top-12">
+
+        <div class="w-12 h-12 bg-[#854DFF] rounded-full absolute top-6 right-44 md:right-16">
+          <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="46"
+              height="44"
+              viewBox="0 0 46 44"
+            >
+              <g fill="none" stroke="#FFF" stroke-width="2">
+                <path
+                  d="M1 22.019C8.333 21.686 23 25.616 23 44M23 44V0M45 22.019C37.667 21.686 23 25.616 23 44"
+                />
+              </g>
+            </svg>
+        </div>
+
+        
+
+      
       </div>
 
       
