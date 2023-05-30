@@ -4,8 +4,7 @@
    const label = document.querySelectorAll(".label")
    const inputs = document.querySelectorAll("input")
    const errorText = document.querySelectorAll(".error-text")
-   let present = new Date ()
-   let presentYear = present.getFullYear()
+   
 
    function subtractDate(yy, mm, dd){
       let currentDate = new Date();
@@ -35,7 +34,8 @@
 
    button.addEventListener("click", function(){
 
-      
+      let present = new Date ()
+      let presentYear = present.getFullYear()
 
 
 
@@ -58,9 +58,48 @@
 
       inputs.forEach((input) => {
          if(input.value === ""){
-            input.classList.add("berror")
+            input.classList.add("berror", "err", "empty")
          }
       })
+
+      for (let i = 0; i < inputs.length; i++){
+         if (!(parseInt(inputs[i].value))){
+            errorText[i].innerText = "Must be a digit"
+            inputs[i].classList.add("err", "berror")
+         }
+      }
+   
+      if((inputs[0].value < 1) || inputs[0].value > 31){
+         errorText[0].innerText = "Must be a valid day"
+         inputs[0].classList.add("err", "berror")
+      }
+   
+      if((inputs[1].value < 1) || inputs[1].value > 12){
+         errorText[1].innerText = "Must be a valid month"
+         inputs[1].classList.add("err", "berror")  
+      } 
+      
+      if(inputs[2].value > presentYear){
+         errorText[2].innerText = "Must be in past"
+         inputs[2].classList.add("err", "berror")
+      }
+
+      for(let i = 0; i < inputs.length; i++){
+        if(inputs[i].classList.contains("err")){
+         label[i].classList.add("lerror")
+         err = true
+        }
+
+        if(inputs[i].classList.contains("empty")){
+         errorText[i].innerText = "This field is required"
+        }
+      }
+
+      if (err === true){
+         yearRes.innerText = "--"
+         monthRes.innerText = "--"
+         dayRes.innerText = "--"
+      }
       
    })
 })()
