@@ -53,21 +53,15 @@
       monthRes.innerText = age.months
       dayRes.innerText = age.days
 
-     let err = false
 
-     if(err = true){
-      yearRes.innerText = "--"
-      monthRes.innerText = "--"
-      dayRes.innerText = "--"
-     }
-     
-     inputs.forEach((input) => {
-      if(input.value === ""){
-         input.classList.add("berror", "err")
-      }
+      let err = false
 
-      
-   }) 
+      inputs.forEach((input) => {
+         if(input.value === ""){
+            input.classList.add("berror")
+         }
+      })
       
    })
 })()
+
